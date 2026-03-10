@@ -1,16 +1,58 @@
-# React + Vite
+# ChiMetrics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A live civic data dashboard for Chicago, built with React and powered by the [Chicago Open Data Portal](https://data.cityofchicago.org).
 
-Currently, two official plugins are available:
+**Live demo:** https://chi-metrics.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## What It Shows
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Crime** — monthly trends, top crime types, breakdown by community area
+- **Transit** — CTA train vs bus ridership, busiest stations ranked
+- **Cameras** — red light and speed camera violations over time, worst intersections
+- **311** — service request types and requests by ward
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React + Vite
+- Recharts
+- Chicago Open Data Portal (Socrata API)
+- Deployed on Vercel
+
+---
+
+## Data Sources
+
+All data is free and public via the Socrata API:
+
+| Dataset | Refresh Rate |
+|---|---|
+| Crime Reports | Daily |
+| CTA Train Ridership | Monthly |
+| CTA Bus Ridership | Monthly |
+| Red Light Camera Violations | Weekly |
+| Speed Camera Violations | Weekly |
+| 311 Service Requests | Daily |
+
+---
+
+## Background
+
+This project started as a C++ program analyzing Chicago red light camera data. After building tooling to parse and query that dataset locally, the next step was turning it into a live, shareable dashboard — pulling from the same data source but now visualized in real time across crime, transit, cameras, and city service requests.
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/davina-titus/ChiMetrics.git
+cd ChiMetrics
+npm install
+npm run dev
+```
+
+---
+
