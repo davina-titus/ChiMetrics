@@ -437,7 +437,7 @@ export default function App() {
                 </h1>
                 <LiveBadge live={live} />
               </div>
-              <div style={{ marginTop: 4, fontSize: 10, color: "#4a6a8a", letterSpacing: 3, fontFamily: "monospace" }}>CIVIC DATA DASHBOARD · CHICAGO OPEN DATA PORTAL</div>
+              <div style={{ marginTop: 4, fontSize: 10, color: "#4a6a8a", letterSpacing: 3, fontFamily: "monospace" }}>BUILT BY DAVINA TITUS · CIVIC DATA DASHBOARD · CHICAGO OPEN DATA PORTAL</div>
             </div>
             <LiveClock />
           </div>
